@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>postal services</title>
+</head>
+<body>
+	<h1>Find your postal rates!</h1>
+	<p>Just fill out the following form:</p>
+	<form method = "GET" action = "../../getRate">
+		Type of package:<br>
+		<select name = "package">
+			<option value = "stamp">Letter (stamped)</option>
+			<option value = "metered">Letter (Metered)</option>
+			<option value = "large">Large Envelopes (Flats)</option>
+			<option value = "first class">Fist Class Package Service</option>
+		</select><br>
+		Weight (oz.):<br>
+		<input type = "text" name = "weight">
+		<input type = "submit" value = "Get Rate">
+	</form> 
+</body>
+</html>

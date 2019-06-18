@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rates</title>
+</head>
+<body>
+	<% var params = parseURL(url);
+	   var rate = calcRate(params.package, parseFloat(params.weight));
+	   var packName;
+	   if (params.package == "stamp")
+	      packName = "Letters (Stamped)";
+	   else if (params.package == "metered")
+	      packName = "Letters (Metered)";
+	   else if (params.package == "large")
+	      packName = "Large Envelope (Flats)";
+	   else
+	      packName = "First Class Package Service";
+	   %>
+	<p> Your <%= packName %> with a weight of 
+	<%= params.weight %> oz. is $<%= rate %></p> 
+</body>
+</html>
